@@ -9,6 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    <% if (uiComponents === 'element') { -%>
+      "element-plus": "2.0.2",
+      "stylelint-scss": "3.20.1",
+    <% } -%>
+    <% if (uiComponents === 'antd') { -%>
+      "ant-design-vue": "3.2.8",
+    <% } -%>
     "vue": "^3.4.29"
   },
   "devDependencies": {

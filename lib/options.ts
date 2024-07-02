@@ -1,15 +1,13 @@
 interface Options {
-  name?: string
-  version?: string
-  src?: string
-  dest?: string
-  components?: string
-  pluginType?: 'component' | 'hook' | 'directive'
-  plugins?: string[]
-  allPackages?: any[]
-  precss?: 'less' | 'scss' | ''
-  vueVersion?: string
-  versionControl?: boolean
+  name?: string // 项目名称
+  version?: string // 脚手架版本
+  src?: string // 模板文件夹路径
+  dest?: string // 创建项目路径
+  uiComponents?: string // UI框架
+  allPackages?: any[] // 所有的依赖
+  precss?: 'less' | 'scss' | '' // css预处理器
+  vueVersion?: string // vue版本
+  versionControl?: boolean // git初始化
 }
 
 export interface Choice {
@@ -23,15 +21,10 @@ export interface Choice {
 const options: Options = {}
 export default options
 
-// vue3:模板文件名数组列表，ejs模板编译的文件名列表
+// ejs模板编译的文件名列表
 export function fetchVue3TemplateFiles(): string[] {
   return [
     'package.json',
-    'babel.config.js',
-    '.stylelintrc.js',
-    'vite.config.ts',
-    'src/App.vue',
-    'src/main.ts',
   ]
 }
 
