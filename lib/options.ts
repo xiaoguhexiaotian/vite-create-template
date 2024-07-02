@@ -4,6 +4,7 @@ interface Options {
   src?: string // 模板文件夹路径
   dest?: string // 创建项目路径
   uiComponents?: string // UI框架
+  utils?: string[] // 工具库
   allPackages?: any[] // 所有的依赖
   precss?: 'less' | 'scss' | '' // css预处理器
   vueVersion?: string // vue版本
@@ -16,7 +17,6 @@ export interface Choice {
   message: string
   choices: { name: string, value: any[] | string | boolean }[]
 }
-
 // 关键对象options，所有的配置与安装均围绕options展开 同时用于存储安装过程的用户选择的值
 const options: Options = {}
 export default options

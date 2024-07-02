@@ -3,6 +3,7 @@ import * as fs from 'fs-extra'
 import createQuestions from '../questions/index'
 import options, { fetchVue3TemplateFiles } from '../options'
 import ejsRender from './ejsRender'
+import chalk from 'chalk'
 
 export default async function (name: string): Promise<void> {
   // 获取name并为options设置name，并设置dest(目标文件夹)为该项目文件夹路径
@@ -19,4 +20,10 @@ export default async function (name: string): Promise<void> {
   if (options.vueVersion === 'vue3') {
     await Promise.all(fetchVue3TemplateFiles().map((filePath: string) => ejsRender(filePath)))
   }
+  console.log(`> 项目模板生成于目录： ${chalk.yellow(options.dest)}`)
+  console.log(`> 项目已经创建成功，请输入以下命令继续...`)
+  console.log('')
+  console.log(chalk.cyan(' $ ') + chalk.blueBright(`cd ${name}`))
+  console.log(chalk.cyan(' $ ') + chalk.blueBright('npm install'))
+  console.log(chalk.cyan(' $ ') + chalk.blueBright('npm run dev'))
 }

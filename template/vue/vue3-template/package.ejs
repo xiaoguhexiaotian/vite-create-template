@@ -16,6 +16,18 @@
     <% if (uiComponents === 'antd') { -%>
       "ant-design-vue": "3.2.8",
     <% } -%>
+    <% if (utils.includes('lodash')) { -%>
+      "lodash": "^4.17.15",
+    <% } -%>
+    <% if (utils.includes('VueUse')) { -%>
+      "@vueuse/core": "^10.2.0",
+    <% } -%>
+    <% if (utils.includes('xe-utils')) { -%>
+      "xe-utils": "^3.5.11",
+    <% } -%>
+    <% if (utils.includes('dayjs')) { -%>
+      "dayjs": "^1.9.8",
+    <% } -%>
     "vue": "^3.4.29"
   },
   "devDependencies": {

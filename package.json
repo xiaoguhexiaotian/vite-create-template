@@ -1,6 +1,6 @@
 {
   "name": "vite-create-template",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Command line interface for rapid Vue.js development based on Vite",
   "author": {
     "name": "guji"
@@ -9,7 +9,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --build && npm link"
   },
-  "main": "dist/vite-create-vue.js",
   "bin": {
     "vite-create-vue": "./dist/vite-create-vue.js"
   },

@@ -4,6 +4,6 @@ export default {
   type: 'list',
   message: '选择 Vue 版本',
   choices: [
-    { name: 'Complete Vue3(完整Vue3+ts版本)', value: 'vue3' } // 可拓展
+    { name: 'Complete Vue3', value: 'vue3' } // 可拓展
   ]
 }
