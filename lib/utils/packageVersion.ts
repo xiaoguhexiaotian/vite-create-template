@@ -1,6 +1,6 @@
 import * as fs from 'fs-extra'
 import * as path from 'path'
-import config from '../config'
+import config from '../options'
 
 // 获取脚手架版本
 export default async function (): Promise<void> {
